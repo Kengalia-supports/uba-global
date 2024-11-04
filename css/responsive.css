@@ -5,24 +5,9 @@ Website: http://wpthemesgrid.com/
 Description: Mediplus - Doctor HTML Template.
 Version:	1.1
 ========================================*/   
-img.img-border{
-	border-radius: 50%;
-	width: 500px;
-	height: 200px;
-}
-.aligned{
-	display:flex;
-	align-items: center;
-	justify-content: center;
-}
-.aligned p{
-	color: #eee;
-}
-.single-icon{
-	text-align: center;
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-}
+
+
+
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Header Sticky */
@@ -386,18 +371,45 @@ img.img-border{
 }
 
 
+/* My Personnal Addition which are Vital
 
+  ## Kengalia-Supports ##
+     
+    Our Teams Sections
+
+*/
+img.img-border{
+	border-radius: 50%;
+	width: 500px;
+	height: 200px;
+}
+.aligned{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.aligned p{
+	color: #eee;
+}
+.single-icon{
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 
 
 
 
 
 }
+
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
+/*
 .header.sticky{
 	
 }
+*/
 .header.sticky .header-bottom{
 	position:absolute;
 	z-index:999;
@@ -452,9 +464,11 @@ img.img-border{
 	font-size: .875em;
 	background: transparent;
 }
+/*
 .slicknav_nav li{
 	
 }
+*/
 .slicknav_nav li a {
 	color: #2C2D3F;
 	transition: all 0.4s ease;
@@ -1044,6 +1058,36 @@ img.img-border{
 }
 
 
+/* My Personnal Addition which are Vital
+
+  ## Kengalia-Supports ##
+     
+    Our Teams Sections
+
+*/
+img.img-border{
+	border-radius: 50%;
+	width: 500px;
+	height: 200px;
+}
+.aligned{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.aligned p{
+	color: #eee;
+}
+.single-icon{
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
@@ -1319,6 +1363,31 @@ img.img-border{
 }
 
 
+/* My Personnal Addition which are Vital
+
+  ## Kengalia-Supports ##
+     
+    Our Teams Sections
+
+*/
+img.img-border{
+	border-radius: 50%;
+	width: 500px;
+	height: 200px;
+}
+.aligned{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.aligned p{
+	color: #eee;
+}
+.single-icon{
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 
 
 

@@ -48,6 +48,38 @@ Version:	1.1
 /*=============================
 	Global CSS 
 ===============================*/
+
+/* My Personnal Addition which are Vital
+
+  ## Kengalia-Supports ##
+     
+    Our Teams Sections
+
+*/
+img.img-border{
+	border-radius: 50%;
+	width: 500px;
+	height: 200px;
+}
+.aligned{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.aligned p{
+	color: #eee;
+}
+.single-icon{
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.teamborder{
+	border-style: round;
+
+}
+
+/*   ##  End Of Kengalia-Supports  ##   */
 body{
     font-family: 'Poppins', sans-serif;
 	font-weight: 400;

@@ -5,6 +5,24 @@ Website: http://wpthemesgrid.com/
 Description: Mediplus - Doctor HTML Template.
 Version:	1.1
 ========================================*/   
+img.img-border{
+	border-radius: 50%;
+	width: 500px;
+	height: 200px;
+}
+.aligned{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.aligned p{
+	color: #eee;
+}
+.single-icon{
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Header Sticky */

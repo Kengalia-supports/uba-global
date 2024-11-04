@@ -217,7 +217,7 @@ Version:	1.1
 }
 .call-action .content {
 	padding: 0;
-	padding: 70px 0;
+	padding: 10px 0;
 }
 .call-action .content h2 {
 	font-size: 28px;
@@ -371,31 +371,6 @@ Version:	1.1
 }
 
 
-/* My Personnal Addition which are Vital
-
-  ## Kengalia-Supports ##
-     
-    Our Teams Sections
-
-*/
-img.img-border{
-	border-radius: 50%;
-	width: 500px;
-	height: 200px;
-}
-.aligned{
-	display:flex;
-	align-items: center;
-	justify-content: center;
-}
-.aligned p{
-	color: #eee;
-}
-.single-icon{
-	text-align: center;
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-}
 
 
 
@@ -702,7 +677,7 @@ img.img-border{
 }
 .call-action .content {
 	padding: 0;
-	padding: 70px 0;
+	padding: 10px 0;
 }
 .call-action .content h2 {
 	font-size: 28px;
@@ -1058,33 +1033,6 @@ img.img-border{
 }
 
 
-/* My Personnal Addition which are Vital
-
-  ## Kengalia-Supports ##
-     
-    Our Teams Sections
-
-*/
-img.img-border{
-	border-radius: 50%;
-	width: 500px;
-	height: 200px;
-}
-.aligned{
-	display:flex;
-	align-items: center;
-	justify-content: center;
-}
-.aligned p{
-	color: #eee;
-}
-.single-icon{
-	text-align: center;
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-}
-
-
 
 
 
@@ -1222,7 +1170,7 @@ img.img-border{
 }
 .call-action .content {
 	padding: 0;
-	padding: 70px 0;
+	padding: 10px 0;
 }
 .call-action .content h2 {
 	font-size: 28px;
@@ -1363,31 +1311,7 @@ img.img-border{
 }
 
 
-/* My Personnal Addition which are Vital
 
-  ## Kengalia-Supports ##
-     
-    Our Teams Sections
-
-*/
-img.img-border{
-	border-radius: 50%;
-	width: 500px;
-	height: 200px;
-}
-.aligned{
-	display:flex;
-	align-items: center;
-	justify-content: center;
-}
-.aligned p{
-	color: #eee;
-}
-.single-icon{
-	text-align: center;
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-}
 
 
 

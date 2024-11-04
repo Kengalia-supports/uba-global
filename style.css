@@ -7,6 +7,7 @@ Version:	1.1
 ========================================*/   
 /*======================================
 [ CSS Table of contents ]
+* Kengalia-Supports CSS
 * Global CSS
 * Header CSS
 	+ Topbar
@@ -45,15 +46,14 @@ Version:	1.1
 * About Us CSS
 * Footer CSS
 ========================================*/ 
-/*=============================
-	Global CSS 
-===============================*/
 
-/* My Personnal Addition which are Vital
+/*=====================================
+         Kengalia-Supports CSS
+======================================
+		 My Personnal Addition which are Vital
 
-  ## Kengalia-Supports ##
-     
-    Our Teams Sections
+ 		## 	Kengalia-Supports 
+   				 Our Teams Sections  ##
 
 */
 img.img-border{
@@ -75,7 +75,7 @@ img.img-border{
 	background-color:white;
 }
 .teamborder{
-	border: 2px ;
+	border: 2px solid #ffffff;
 	border-radius: 5px;
 	
 	background-color:#1A76D1;
@@ -85,11 +85,17 @@ img.img-border{
 	border: 2px;
 	border-radius: 50%;
 	margin: 10px 10px 10px 10px;
+	
 }
 
 
 
 /*   ##  End Of Kengalia-Supports  ##   */
+
+/*=============================
+	Global CSS 
+===============================*/
+
 body{
     font-family: 'Poppins', sans-serif;
 	font-weight: 400;

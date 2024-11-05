@@ -87,8 +87,31 @@ img.img-border{
 	margin: 10px 10px 10px 10px;
 	
 }
-
-
+.productborder{
+	border-left: 5px outset #5fabf8;
+	border-right: 10px ridge #5fabf8;
+	border-radius: 0px;
+	
+	
+}
+.productborder.first{
+	border-top:3px solid #00ffff91;
+	border-radius: 5px;
+	border-top-left-radius: 155px;
+	border-top-right-radius: 155px;
+}
+.productborder.last{
+	border-radius: 5px;
+	border-left:3px solid #00ffff91;
+	border-bottom:1px solid #00ffff91;
+	border-bottom-left-radius: 55px;
+	border-bottom-right-radius: 55px;
+	
+}
+.display-img{
+	border: 1px solid #5fabf8;
+	border-radius: 50px;
+}
 
 /*   ##  End Of Kengalia-Supports  ##   */
 

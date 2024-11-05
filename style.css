@@ -47,6 +47,7 @@ Version:	1.1
 * Footer CSS
 ========================================*/ 
 
+
 /*=====================================
          Kengalia-Supports CSS
 ======================================
@@ -89,23 +90,21 @@ img.img-border{
 }
 .productborder{
 	border-left: 5px outset #5fabf8;
-	border-right: 10px ridge #5fabf8;
+	border-right: 3px ridge #5fabf8;
 	border-radius: 0px;
-	
-	
 }
 .productborder.first{
 	border-top:3px solid #00ffff91;
 	border-radius: 5px;
-	border-top-left-radius: 55px;
-	border-top-right-radius: 55px;
+	border-top-left-radius: 45px;
+	border-top-right-radius: 20px;
 }
 .productborder.last{
 	border-radius: 5px;
 	border-left:3px solid #00ffff91;
 	border-bottom:1px solid #00ffff91;
-	border-bottom-left-radius: 50px;
-	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
 	
 }
 .display-img{
@@ -975,7 +974,7 @@ body{
 	padding:120px 0;
 }
 .fun-facts{
-	background:url('img/fun-bg.jpg');
+	
 	background-size:cover;
 	background-repeat:no-repeat;
 }
@@ -1141,7 +1140,7 @@ body{
 	Start Call to action CSS
 =================================*/
 .call-action{
-	background-image:url('img/call-bg.jpg');
+	background:url('img/theweb/background-team.jpg');
 	background-size:cover;
 	background-position:center;
 	position:relative;

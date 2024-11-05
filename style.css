@@ -97,20 +97,20 @@ img.img-border{
 .productborder.first{
 	border-top:3px solid #00ffff91;
 	border-radius: 5px;
-	border-top-left-radius: 155px;
-	border-top-right-radius: 155px;
+	border-top-left-radius: 55px;
+	border-top-right-radius: 55px;
 }
 .productborder.last{
 	border-radius: 5px;
 	border-left:3px solid #00ffff91;
 	border-bottom:1px solid #00ffff91;
-	border-bottom-left-radius: 55px;
-	border-bottom-right-radius: 55px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
 	
 }
 .display-img{
 	border: 1px solid #5fabf8;
-	border-radius: 50px;
+	border-radius: 30px;
 }
 
 /*   ##  End Of Kengalia-Supports  ##   */

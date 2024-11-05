@@ -89,19 +89,19 @@ img.img-border{
 	
 }
 .productborder{
-	border-left: 5px outset #5fabf8;
+	border-left: 1px outset #5fabf8;
 	border-right: 3px ridge #5fabf8;
 	border-radius: 0px;
 }
 .productborder.first{
 	border-top:3px solid #00ffff91;
-	border-radius: 5px;
+	border-radius: 0px;
 	border-top-left-radius: 45px;
 	border-top-right-radius: 20px;
 }
 .productborder.last{
-	border-radius: 5px;
-	border-left:3px solid #00ffff91;
+	border-radius: 0px;
+	border-left:1.2px solid #00ffff91;
 	border-bottom:1px solid #00ffff91;
 	border-bottom-left-radius: 40px;
 	border-bottom-right-radius: 40px;

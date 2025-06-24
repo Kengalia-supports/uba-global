@@ -90,8 +90,10 @@ img.img-border{
 }
 .productborder{
 	border-left: 1px outset #5fabf8;
-	border-right: 3px ridge #5fabf8;
-	border-radius: 0px;
+	border-right: 1px outset #5fabf8;
+	border-top: 3px ridge #5fabf8;
+	border-bottom:3px ridge #5fabf8;
+	border-radius: 15px;
 }
 .productborder.first{
 	border-top:3px solid #00ffff91;
@@ -107,6 +109,219 @@ img.img-border{
 	border-bottom-right-radius: 40px;
 	
 }
+.productcontent{
+	line-height: 26px;
+	text-align: center;
+	color: black;
+	font-size:17px;
+	background-color: #f3fafd;
+	padding: 12px;
+}
+.productcontent .strongtext{
+	color:#570701;
+}
+.img_intro_style img{
+	display: block;
+	Margin: 20px auto;
+	width: 550px;
+	height: auto;
+	text-align: center;
+}
+.productspacing{
+	margin: 500px;
+	padding: 500px;
+}
+.cusborder{
+	border-left: 1px outset #f8905f;
+	border-right: 1px outset #f8905f;
+	border-top: 5px ridge #5fabf8;
+	border-radius: 15px;
+	width: 800px;
+	display: block;
+	margin: 0 auto;
+}
+.cuswide{
+	Margin:0px;
+	padding:20px;
+	border: 1px solid #3a388b;
+	border-top: 0px;;
+	border-radius: 8px;
+	
+	display:block;
+}
+.cuswide .row{
+	--bs-gutter-x: 5px;
+	--bs-gutter-y: 5px;
+}
+.cusdisplay-img{
+	margin: 0 auto;
+	padding:0 auto;
+	width: 250px;
+	
+	
+}
+.custext{
+	color:#570701;
+	text-align: center;
+}
+.section-head {
+	text-align: center;
+    padding: 0 50px;
+}
+/*=============================
+	Start Schedule CSS
+===============================*/
+.sch {
+	background: #fff;
+	margin: 0;
+	padding: 10px;
+	height: 100%;
+}
+.sch .sch-inner {
+	position: relative;
+	transform: translateY(0%);
+	z-index:9;
+}
+.sch .single-sch {
+	margin-bottom: 15px;
+	position: relative;
+	text-align: left;
+	z-index:3;
+	border-radius:15px;
+	background:#1A76D1;
+	 -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+}
+.sch .single-sch .inner {
+	overflow:hidden;
+	position:relative;
+	padding:30px;
+	z-index:2;
+}
+.sch .single-sch:before{
+	position: absolute;
+    z-index: -1;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+    height: 90%;
+    background:#1A76D1;
+    opacity: 0;
+    filter: blur(10px);
+    -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+}
+.sch .single-sch:hover:before{
+	opacity: 0.8;
+}
+.sch .single-sch:hover{
+	transform: translateY(-5px);
+}
+.sch .single-sch .icon i{
+	position: absolute;
+	font-size: 110px;
+	color: #fff;
+	 -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+	z-index:-1;
+	visibility:visible;
+	opacity:0.2;
+	right: -25px;
+	bottom: -30px;
+}
+.sch .single-sch span{
+	display:block;
+	color:#fff;
+}
+.sch .single-sch h4{
+	font-size: 30px;
+	font-weight:600;
+	display:inline-block;
+	text-transform:capitalize;
+	color:#fcfcfd;
+	margin-top:13px;
+}
+.sch .single-sch li{
+	font-size: 20px;
+	font-weight:400;
+	display:inline-block;
+	text-transform:capitalize;
+	color:#fcfcfd;
+	margin-top:5px;
+}
+.sch .single-sch p{
+	color:#fff;
+	margin-top:22px;
+}
+.sch .single-sch a {
+	color: #fff;
+	margin-top: 25px;
+	font-weight: 500;
+	display: inline-block;
+	position: relative;
+}
+.sch .single-sch a:before{
+	position:absolute;
+	content:"";
+	left:0;
+	bottom:0;
+	height:1px;
+	width:0%;
+	background:#fff;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+.sch .single-sch a:hover:before{
+	width:100%;
+	width:100%;
+}
+.sch .single-sch a i{
+	margin-left:10px;
+}
+
+.sch .single-sch .time-sidual{
+	overflow:hidden;
+	margin-top:17px;
+}
+.sch .single-sch .time-sidual li {
+	display: block;
+	color: #fff;
+	width: 100%;
+	margin-bottom:3px;
+}
+.sch .single-sch .time-sidual li:last-child{
+	margin:0;
+}
+.sch .single-sch .time-sidual li span{
+	display:inline-block;
+	float:right;
+}
+.sch .single-sch .day-head .time {
+	font-weight: 400;
+	float: right;
+}
+.sch .sch-expand{
+	
+}
+/*=============================
+	End Schedule CSS
+===============================*/
+
+
+
 .display-img{
 	border: 1px solid #5fabf8;
 	border-radius: 30px;

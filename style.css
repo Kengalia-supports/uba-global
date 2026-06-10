@@ -57,6 +57,30 @@ Version:	1.1
    				 Our Teams Sections  ##
 
 */
+/*Carousel for Customer Logos (CSS-Only*/
+
+
+
+
+/*Hover Effects for Images & Captions*/
+figure img {
+  transition: transform 0.3s ease;
+}
+figure:hover img {
+  transform: scale(1.05);
+}
+figcaption:hover {
+  background-color: #def2fb;
+  transition: background-color 0.3s ease;
+}
+
+/*Thick Border Between Sections*/
+.section-divider {
+  border-top: 20px solid #004080;
+  margin: 40px 0;
+}
+
+
 img.img-border{
 	border-radius: 50%;
 	width: 500px;
@@ -66,24 +90,26 @@ img.img-border{
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	text-align:center;
+	
 }
-.aligned p{
-	color: #eee;
+.aligned span{
+	color: #1d1ad1;
 }
 .single-icon{
 	text-align: center;
 	border-radius: 10px;
 	background-color:white;
+	border: 2px solid #1d1d1e;
 }
 .teamborder{
-	border: 2px solid #ffffff;
+	border: 2px solid #1d1ad1;
 	border-radius: 5px;
-	
-	background-color:#1A76D1;
+	background-color:#fbfbfb;
 }
 .outteamborder{
-	background-color:rgb(255, 255, 255);
-	border: 2px;
+	background-color:#3630aa;
+	border: 2px solid #040425;
 	border-radius: 50%;
 	margin: 10px 10px 10px 10px;
 	
@@ -188,7 +214,7 @@ img.img-border{
 	text-align: left;
 	z-index:3;
 	border-radius:15px;
-	background:#1A76D1;
+	background:#1b3dc7;
 	 -webkit-transition: all .3s ease-out 0s;
     -moz-transition: all .3s ease-out 0s;
     -ms-transition: all .3s ease-out 0s;
@@ -211,7 +237,7 @@ img.img-border{
     margin: 0 auto;
     width: 80%;
     height: 90%;
-    background:#1A76D1;
+    background:#1d1ad1;
     opacity: 0;
     filter: blur(10px);
     -webkit-transition: all .3s ease-out 0s;
@@ -591,6 +617,7 @@ body{
 }
 .get-quote .btn{
 	color:#fff;
+	background-color: #1d1ad1;
 }
 .header .logo {
 	float: left;
@@ -629,7 +656,7 @@ body{
 	bottom: 0;
 	height: 3px;
 	width:0%;
-	background: #1A76D1;
+	background: #1d1ad1;
 	border-radius: 5px 5px 0 0;
 	opacity:0;
 	visibility:hidden;
@@ -895,19 +922,21 @@ body{
 	line-height: 42px;
 }
 .slider .single-slider h1 span{
-	color:#1a76d1;
+	color: #1d1ad1;
 }
 .slider .single-slider p {
-	color: #2C2D3F;
+	color: #1a76d1;
 	margin-top: 27px;
 	font-weight: 400;
 }
 .slider .single-slider .button{
 	margin-top:30px;
+	-ms-flex-item-align: start;
+	text-align: right;
 }
 .slider .single-slider .btn{
 	color:#fff;
-	background:#1a76d1;
+	background:#1d1ad1;
 	font-weight:500;
 	display:inline-block;
 	margin:0;
@@ -990,7 +1019,7 @@ body{
 	text-align: left;
 	z-index:3;
 	border-radius:5px;
-	background:#1A76D1;
+	background:#1d1ad1;
 	 -webkit-transition: all .3s ease-out 0s;
     -moz-transition: all .3s ease-out 0s;
     -ms-transition: all .3s ease-out 0s;
@@ -1374,7 +1403,7 @@ body{
 .call-action .content p {
 	color: #fff;
 	margin: 30px 0px;
-	font-size: 15px;
+	font-size: 20px;
 }
 .call-action .content .btn{
 	background:#fff;
@@ -1384,10 +1413,10 @@ body{
 	color:#1a76d1;
 }
 .call-action .content .btn:before{
-	background:#1A76D1;
+	background:#1d1ad1;
 }
 .call-action .content .btn:hover{
-	background:#1A76D1;
+	background:#333336;
 	color:#fff;
 }
 .call-action .content .btn:last-child{
@@ -1603,7 +1632,7 @@ body{
 }
 .services .single-service i{
 	font-size:45px;
-	color:#1a76d1;
+	color:#1d1ad1;
 	position:absolute;
 	left:0;
 	-webkit-transition:all 0.4s ease;
@@ -1624,7 +1653,7 @@ body{
 	color:#1A76D1;
 }
 .services .single-service p{
-	color:#868686;
+	color:#570701;
 }
 /*-- Service Details --*/
 .services-details-img {
@@ -1900,17 +1929,20 @@ body{
 	Start Pricing Table CSS
 ===============================*/
 .pricing-table{
-	background:#f9f9f9;
+	background:#f8faf0;
 	position:relative;
 }
 .pricing-table .single-table {
-	background: #fff;
-	border:1px solid #ddd;
+	background: #1d1ad1;
+	border:1px solid #ffffff;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
 	margin: 15px 0;
 	padding:45px 35px 30px 35px;
+}
+.pricing-table .section-title p{
+	color:#570701;
 }
 /* Table Head */
 .pricing-table .single-table .table-head {
@@ -1922,8 +1954,8 @@ body{
 }
 .pricing-table .single-table .title {
 	font-size: 21px;
-	color: #2C2D3F;
-	margin-top: 30px;
+	color: #ffffff;
+	margin-top: 0px;
 	margin-bottom: 15px;
 }
 .pricing-table .single-table .amount {
@@ -1946,8 +1978,9 @@ body{
 }
 .pricing-table .table-list li {
 	position: relative;
-	color: #666;
+	color: #ffffff;
 	text-transform: capitalize;
+	font-size:18px;
 	margin-bottom: 18px;
 	padding-right: 32px;
 }
@@ -1967,8 +2000,8 @@ body{
 	width: 16px;
 	line-height: 16px;
 	text-align: center;
-	color: #fff;
-	background: #1a76d1;
+	color: #1218c6;
+	background: #fafafa;
 	border-radius: 100%;
 	padding-left: 1px;
 }
@@ -4254,7 +4287,7 @@ body{
 .footer .footer-top{
 	padding:100px 0px;
 	position:relative;
-	background:#1A76D1;
+	background:#4542d2;
 }
 .footer .footer-top:before{
 	position:absolute;
@@ -4362,6 +4395,9 @@ body{
 	float: right;
 }
 .footer .single-footer p{
+	color:#fff;
+}
+.footer .single-footer address{
 	color:#fff;
 }
 .footer .single-footer .newsletter-inner{

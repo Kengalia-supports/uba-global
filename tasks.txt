@@ -16,6 +16,16 @@ Canonical domain enforced as non-www: https://uba-global.com
 [ ] Upload img/theweb/og-image.png and the updated index.html, robots.txt, sitemap.xml
 
 ------------------------------------------------------------
+NEXT UPGRADE PATCH  (DEV) — bundle ALL of these, then ONE upload
+Baseline PageSpeed after launch:  Mobile perf 79 / Desktop 88 | A11y 94/88 | BP 96/100 | SEO 100/100
+------------------------------------------------------------
+[ ] Trim Google Font — load only Poppins 300/400/500/600/700 (currently ~16 weights/italics). Big, safe perf win.
+[ ] Generate WebP + wire <picture> for slider (LCP element), team photos, product items.
+[ ] Slim render-blocking CSS — subset/replace icofont.css (92 KB) and bootstrap (166 KB, used for grid only).
+[ ] A11y — add aria-labels to the icon-only footer social links; fix hero text contrast (blanchedalmond highlight).
+[ ] Bump the cache-version (?v=) when shipping so the patch goes live immediately.
+
+------------------------------------------------------------
 ACCOUNT SETUP  (YOU) — do all of this from the COMPANY account
 (admin@uba-global.com via Google Workspace), NOT a personal Gmail.
 You/Kengalia manage via delegated access; the business stays the owner.
@@ -49,11 +59,12 @@ DONE (in the code)
 [x] Image tooling installed (sharp): `npm run images:webp` / `npm run images:compress`
 [x] Performance: trimmed JS 21->8 libs, deferred scripts, lazy-loaded 32 images, preconnect hints
 [x] Modern, mobile-friendly Team + Esteemed Customers sections with semantic markup & alt text
+[x] Compressed all images in place (sharp q80): img/ 15.4MB -> 5.6MB (-64%)
+[x] Fixed product-section unclosed <div> (team-section overlap) + added CSS/JS cache-busting (?v=)
 
 ------------------------------------------------------------
 READY WHEN YOU ARE  (DEV) — say the word
 ------------------------------------------------------------
-[ ] Compress images + generate WebP and wire up <picture> (tooling is now installed)
 [ ] FAQ section with FAQPage schema (can earn rich snippets)
 [ ] Individual product/category pages — big keyword-coverage expansion vs. one page
 [ ] Engineering blog build-out (blog-single.html is the starting template)

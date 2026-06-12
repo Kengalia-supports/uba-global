@@ -156,7 +156,8 @@ Version:	1.1
 	background:#fff;
 	opacity:0.5;
 }
-.slider .single-slider h1 {
+.slider .single-slider h1,
+.slider .single-slider h2 {
 	font-size: 28px;
 	font-weight: 600;
 	line-height: 35px;
@@ -608,7 +609,8 @@ Version:	1.1
 	background:#fff;
 	opacity:0.5;
 }
-.slider .single-slider h1 {
+.slider .single-slider h1,
+.slider .single-slider h2 {
 	font-size: 28px;
 	font-weight: 600;
 	line-height: 35px;
@@ -1099,7 +1101,8 @@ Version:	1.1
 	background:#fff;
 	opacity:0.5;
 }
-.slider .single-slider h1 {
+.slider .single-slider h1,
+.slider .single-slider h2 {
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 25px;

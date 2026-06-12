@@ -1,0 +1,52 @@
+# ============================================================
+#  DE-Blessed Uba Global — Apache/LiteSpeed config (qservers)
+#  Upload to public_html. (File starts with a dot — enable
+#  "Show Hidden Files" in cPanel File Manager to see it.)
+# ============================================================
+
+# --- Custom branded error page ---
+ErrorDocument 404 /404.html
+
+# --- Force HTTPS + canonical non-www (https://uba-global.com) ---
+#  NOTE: requires an active SSL certificate. Confirm https://uba-global.com
+#  loads with a padlock first. If SSL is not yet active, comment out this
+#  whole <IfModule> block until it is, or the site will fail to load.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# --- Gzip compression for text assets ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml \
+    text/javascript application/javascript application/json \
+    application/xml image/svg+xml
+</IfModule>
+
+# --- Browser caching (faster repeat visits / Core Web Vitals) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                      "access plus 1 month"
+  ExpiresByType text/html             "access plus 0 seconds"
+  ExpiresByType text/css              "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg            "access plus 6 months"
+  ExpiresByType image/png             "access plus 6 months"
+  ExpiresByType image/webp            "access plus 6 months"
+  ExpiresByType image/svg+xml         "access plus 6 months"
+  ExpiresByType image/x-icon          "access plus 1 year"
+  ExpiresByType font/woff2            "access plus 1 year"
+</IfModule>
+
+# --- Light security/SEO headers ---
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# --- Default document ---
+DirectoryIndex index.html

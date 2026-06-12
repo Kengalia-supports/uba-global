@@ -1,0 +1,60 @@
+============================================================
+ DE-Blessed Uba Global — SEO / Launch Checklist
+============================================================
+Key:  [x] done   [ ] to do   (YOU) = external action   (DEV) = I can do in code
+
+------------------------------------------------------------
+DEPLOYMENT
+------------------------------------------------------------
+Live site is hosted on qservers.ng (Apache/cPanel) — NOT GitHub Pages.
+Deploy = upload changed files to public_html (cPanel File Manager / FTP).
+Canonical domain enforced as non-www: https://uba-global.com
+[ ] Upload .htaccess to public_html (enable "Show Hidden Files" to see it)
+        ONLY after confirming https://uba-global.com loads with a padlock (SSL active).
+        It forces HTTPS + non-www, serves the branded 404, adds gzip + caching.
+[ ] Confirm SSL certificate is active in cPanel (free Let's Encrypt / AutoSSL)
+[ ] Upload img/theweb/og-image.png and the updated index.html, robots.txt, sitemap.xml
+
+------------------------------------------------------------
+ACCOUNT SETUP  (YOU) — do all of this from the COMPANY account
+(admin@uba-global.com via Google Workspace), NOT a personal Gmail.
+You/Kengalia manage via delegated access; the business stays the owner.
+------------------------------------------------------------
+[ ] Create company Google Workspace email on uba-global.com (owns everything below)
+[ ] Google Search Console — verify uba-global.com from the COMPANY account, submit sitemap.xml.
+        (If you already verified with personal Gmail, just add the company account as Owner
+         later and remove yourself — data stays with the domain, nothing is lost.)
+[ ] Bing Webmaster Tools — import from Search Console (1 click)
+[ ] Google Business Profile — claim/verify the ONE real Lagos address (no duplicates).
+        Biggest local-SEO lever: reviews, map pack, hours, photos.
+[ ] Google Analytics (GA4) — company-owned property; grant Kengalia access
+[ ] Google Ads — single account if only this client; Manager account (MCC) if managing several
+[ ] Microsoft Advertising — same pattern as Google Ads
+
+------------------------------------------------------------
+CONTENT / INFO NEEDED FROM YOU  (YOU) — then I wire it in
+------------------------------------------------------------
+[ ] Real social profile URLs (Facebook, X, LinkedIn, etc.)
+        -> I'll replace the footer "#" links + add "sameAs" to the structured data
+[ ] Office geo-coordinates (lat/long)
+        -> I'll add "geo" to the LocalBusiness schema (helps map ranking)
+[ ] Confirm full legal address + CAC reg number for schema accuracy
+
+------------------------------------------------------------
+DONE (in the code)
+------------------------------------------------------------
+[x] SEO <head>: optimized title, description, canonical, robots, theme-color,
+        Open Graph + Twitter cards, Organization/LocalBusiness + WebSite + SiteNavigationElement JSON-LD
+[x] Proper 1200x630 social share image -> img/theweb/og-image.png (wired into OG/Twitter)
+[x] Image tooling installed (sharp): `npm run images:webp` / `npm run images:compress`
+[x] Performance: trimmed JS 21->8 libs, deferred scripts, lazy-loaded 32 images, preconnect hints
+[x] Modern, mobile-friendly Team + Esteemed Customers sections with semantic markup & alt text
+
+------------------------------------------------------------
+READY WHEN YOU ARE  (DEV) — say the word
+------------------------------------------------------------
+[ ] Compress images + generate WebP and wire up <picture> (tooling is now installed)
+[ ] FAQ section with FAQPage schema (can earn rich snippets)
+[ ] Individual product/category pages — big keyword-coverage expansion vs. one page
+[ ] Engineering blog build-out (blog-single.html is the starting template)
+[ ] Add geo + sameAs to schema (once you provide coords + social URLs)

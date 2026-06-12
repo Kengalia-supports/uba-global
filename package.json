@@ -1,0 +1,14 @@
+{
+  "name": "uba-global",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DE-Blessed Uba Global website",
+  "type": "module",
+  "scripts": {
+    "images:webp": "node tools/optimize-images.mjs --webp",
+    "images:compress": "node tools/optimize-images.mjs --compress"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

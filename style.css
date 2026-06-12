@@ -4527,3 +4527,32 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+/* ===== Our Partners (logo grid) ===== */
+.partner-wall{
+	list-style:none;
+	margin:0;
+	padding:0;
+	display:grid;
+	grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
+	gap:16px;
+}
+.partner-wall li{
+	background:#fff;
+	border:1px solid #e6e6ef;
+	border-radius:10px;
+	height:96px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:14px;
+	transition:transform .3s ease, box-shadow .3s ease;
+}
+.partner-wall li:hover{
+	transform:translateY(-4px);
+	box-shadow:0 8px 20px rgba(29,26,209,.12);
+}
+.partner-wall img{
+	max-width:100%;
+	max-height:100%;
+	object-fit:contain;
+}

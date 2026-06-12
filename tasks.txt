@@ -4,68 +4,72 @@
 Key:  [x] done   [ ] to do   (YOU) = external action   (DEV) = I can do in code
 
 ------------------------------------------------------------
-DEPLOYMENT
+DEPLOYMENT  (how this site ships)
 ------------------------------------------------------------
-Live site is hosted on qservers.ng (Apache/cPanel) — NOT GitHub Pages.
-Deploy = upload changed files to public_html (cPanel File Manager / FTP).
-Canonical domain enforced as non-www: https://uba-global.com
-[ ] Upload .htaccess to public_html (enable "Show Hidden Files" to see it)
-        ONLY after confirming https://uba-global.com loads with a padlock (SSL active).
-        It forces HTTPS + non-www, serves the branded 404, adds gzip + caching.
-[ ] Confirm SSL certificate is active in cPanel (free Let's Encrypt / AutoSSL)
-[ ] Upload img/theweb/og-image.png and the updated index.html, robots.txt, sitemap.xml
+Hosted on qservers.ng (Apache/cPanel) — NOT GitHub Pages. `git push` only updates
+GitHub; deploy = upload to public_html (or wipe + extract C:\tmp\uba-global-deploy.zip).
+Canonical = non-www (https://uba-global.com), enforced by .htaccess.
+On every CSS/JS change, bump the ?v= cache-version so browsers refetch.
+[x] Live: HTTPS + non-www redirect, branded 404, gzip + caching (.htaccess)
 
 ------------------------------------------------------------
-NEXT UPGRADE PATCH  (DEV) — bundle ALL of these, then ONE upload
-Baseline PageSpeed after launch:  Mobile perf 79 / Desktop 88 | A11y 94/88 | BP 96/100 | SEO 100/100
-------------------------------------------------------------
-[ ] Trim Google Font — load only Poppins 300/400/500/600/700 (currently ~16 weights/italics). Big, safe perf win.
-[ ] Generate WebP + wire <picture> for slider (LCP element), team photos, product items.
-[ ] Slim render-blocking CSS — subset/replace icofont.css (92 KB) and bootstrap (166 KB, used for grid only).
-[ ] A11y — add aria-labels to the icon-only footer social links; fix hero text contrast (blanchedalmond highlight).
-[ ] Bump the cache-version (?v=) when shipping so the patch goes live immediately.
+PERFORMANCE — CONTINUE NEXT TIME  (DEV)
+Latest PageSpeed:  Mobile 77 / Desktop 90 · A11y 94/93 · BP 96/100 · SEO 100/100
+Mobile metrics: FCP 3.3s, LCP 4.5s (red) | TBT 40ms, CLS 0.009 (green)
+The render-path trio Lighthouse named — higher-risk, TEST before the live upload:
+[ ] Render-blocking CSS (~1,050 ms) — load non-critical CSS async
+        (media="print" onload trick) and/or inline critical CSS; subset/replace
+        icofont.css (92 KB) + bootstrap.min.css (166 KB, used for grid only).
+[ ] Font-display (~420 ms) — self-host a Poppins subset + <link rel=preload>,
+        or make the font stylesheet non-blocking (display=swap already set).
+[ ] LCP 4.5s — slider background JPG is the LCP and is discovered late.
+        Preload it (<link rel=preload as=image>) + serve WebP for slider
+        backgrounds via image-set() (or switch the slider to <img>).
+[ ] Minor: right-size the LCP/slider image (~33 KiB); cache lifetimes (~10 KiB, mostly 3rd-party GA/Clarity).
 
 ------------------------------------------------------------
-ACCOUNT SETUP  (YOU) — do all of this from the COMPANY account
-(admin@uba-global.com via Google Workspace), NOT a personal Gmail.
-You/Kengalia manage via delegated access; the business stays the owner.
+ACCOUNT SETUP  (YOU) — keep the BUSINESS as owner, Kengalia as manager
 ------------------------------------------------------------
-[ ] Create company Google Workspace email on uba-global.com (owns everything below)
-[ ] Google Search Console — verify uba-global.com from the COMPANY account, submit sitemap.xml.
-        (If you already verified with personal Gmail, just add the company account as Owner
-         later and remove yourself — data stays with the domain, nothing is lost.)
-[ ] Bing Webmaster Tools — import from Search Console (1 click)
-[ ] Google Business Profile — claim/verify the ONE real Lagos address (no duplicates).
-        Biggest local-SEO lever: reviews, map pack, hours, photos.
-[ ] Google Analytics (GA4) — company-owned property; grant Kengalia access
-[ ] Google Ads — single account if only this client; Manager account (MCC) if managing several
-[ ] Microsoft Advertising — same pattern as Google Ads
+[x] Google Search Console — domain property verified, sitemap submitted
+[x] Bing Webmaster Tools — imported from Search Console
+[x] GA4 created (G-4ZH5C63XK5) and wired into all pages
+[ ] Move ownership to a company Workspace email (admin@uba-global.com) when ready;
+        add it as Owner in Search Console / GA4, then drop personal Gmail.
+[ ] Google Business Profile — claim/verify the ONE real Lagos address
+        (biggest local-SEO lever: reviews, photos, hours)
+[ ] GA4 Realtime sanity check after deploy (open site -> see 1 active user)
+[ ] Google Ads / Microsoft Advertising — when ready to run campaigns
 
 ------------------------------------------------------------
-CONTENT / INFO NEEDED FROM YOU  (YOU) — then I wire it in
+WAITING ON YOU (content) — then I wire it in  (DEV)
 ------------------------------------------------------------
-[ ] Real social profile URLs (Facebook, X, LinkedIn, etc.)
-        -> I'll replace the footer "#" links + add "sameAs" to the structured data
-[ ] Office geo-coordinates (lat/long)
-        -> I'll add "geo" to the LocalBusiness schema (helps map ranking)
+[ ] Real social profile URLs -> footer links + "sameAs" in schema
+        (footer links already have aria-labels but dead "#" hrefs)
+[ ] Office geo-coordinates (lat/long) -> "geo" in LocalBusiness schema
 [ ] Confirm full legal address + CAC reg number for schema accuracy
+[ ] Optional: cleaner partner logos — drop better files into img/partner/ (same names), zero code change
 
 ------------------------------------------------------------
 DONE (in the code)
 ------------------------------------------------------------
-[x] SEO <head>: optimized title, description, canonical, robots, theme-color,
-        Open Graph + Twitter cards, Organization/LocalBusiness + WebSite + SiteNavigationElement JSON-LD
-[x] Proper 1200x630 social share image -> img/theweb/og-image.png (wired into OG/Twitter)
-[x] Image tooling installed (sharp): `npm run images:webp` / `npm run images:compress`
-[x] Performance: trimmed JS 21->8 libs, deferred scripts, lazy-loaded 32 images, preconnect hints
-[x] Modern, mobile-friendly Team + Esteemed Customers sections with semantic markup & alt text
-[x] Compressed all images in place (sharp q80): img/ 15.4MB -> 5.6MB (-64%)
-[x] Fixed product-section unclosed <div> (team-section overlap) + added CSS/JS cache-busting (?v=)
+[x] SEO <head>: title/description/canonical(non-www)/robots/OG+Twitter + JSON-LD (LocalBusiness/WebSite/SiteNav)
+[x] 1200x630 OG share image; GA4 on all pages; Clarity on homepage
+[x] Cleanup: removed 35+ debris files, JS 21->8 libs (deferred), 4 unused CSS, broken mail.php
+[x] Images: compressed in place (-64%) + WebP generated; all <img> wrapped in <picture>
+[x] Google Font trimmed 16->5 weights; lazy-loading; preconnect; cache-busting (?v=)
+[x] Redesigned Team + Esteemed Customers (modern/responsive/semantic)
+[x] Partner section: real 28-brand logo grid (PNG+WebP) replacing the composite image
+[x] A11y: aria-labels on footer social icons; branded working 404 page
+[x] Fixed bugs: gmaps error, BS5 modal on BS4, dead links, invalid nav/markup, double-h1
 
 ------------------------------------------------------------
 READY WHEN YOU ARE  (DEV) — say the word
 ------------------------------------------------------------
-[ ] FAQ section with FAQPage schema (can earn rich snippets)
-[ ] Individual product/category pages — big keyword-coverage expansion vs. one page
-[ ] Engineering blog build-out (blog-single.html is the starting template)
-[ ] Add geo + sameAs to schema (once you provide coords + social URLs)
+[ ] REDESIGN PRODUCT SECTION (planned) — replace the 4-in-1 catalog images
+        (img/imging/item*.jpg) with one card per product. 57 individual product
+        images are ready in img/products/ (PNG + WebP, slug names, e.g.
+        armoured-cables.png, transformers.png, mcb.png). Each card: product image
+        + product name heading + SEO alt text; group by category. Big keyword win.
+[ ] FAQ section with FAQPage schema (rich snippets)
+[ ] Individual product/category pages (big keyword expansion vs one page)
+[ ] Engineering blog build-out (blog-single.html is the template)

@@ -53,27 +53,31 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://www.clarity.ms">
 
+	<!-- Preload LCP hero image -->
+	<link rel="preload" as="image" href="img/theweb/slider1.webp" type="image/webp" fetchpriority="high">
+
 	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-		rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
 
 	<!-- Bootstrap CSS (grid only) -->
-	<link rel="stylesheet" href="css/bootstrap.min.css?v=20260614">
+	<link rel="stylesheet" href="css/bootstrap.min.css?v=20260615">
 	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" href="css/font-awesome.min.css?v=20260614">
+	<link rel="stylesheet" href="css/font-awesome.min.css?v=20260615" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="css/font-awesome.min.css?v=20260615"></noscript>
 	<!-- icofont CSS -->
-	<link rel="stylesheet" href="css/icofont.css?v=20260614">
+	<link rel="stylesheet" href="css/icofont.css?v=20260615" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="css/icofont.css?v=20260615"></noscript>
 	
 	<!-- Slicknav -->
-	<link rel="stylesheet" href="css/slicknav.min.css?v=20260614">
+	<link rel="stylesheet" href="css/slicknav.min.css?v=20260615">
 	<!-- Owl Carousel CSS -->
-	<link rel="stylesheet" href="css/owl-carousel.css?v=20260614">
+	<link rel="stylesheet" href="css/owl-carousel.css?v=20260615">
 
 	<!-- Site CSS -->
-	<link rel="stylesheet" href="css/normalize.css?v=20260614">
-	<link rel="stylesheet" href="style.css?v=20260614">
-	<link rel="stylesheet" href="css/responsive.css?v=20260614">
+	<link rel="stylesheet" href="css/normalize.css?v=20260615">
+	<link rel="stylesheet" href="style.css?v=20260615">
+	<link rel="stylesheet" href="css/responsive.css?v=20260615">
 
 	<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -204,7 +208,7 @@
 	<section class="slider" aria-label="Introduction">
 		<div class="hero-slider">
 			<!-- Start Single Slider -->
-			<div class="single-slider" style="background-image:url('img/theweb/slider1.jpg')"
+			<div class="single-slider" style="background-image:url('img/theweb/slider1.jpg'); background-image:image-set(url('img/theweb/slider1.webp') type('image/webp'), url('img/theweb/slider1.jpg') type('image/jpeg'))"
 				alt="Supplier of Electical and Electronics Equipment">
 				<div class="container">
 					<div class="row">
@@ -228,7 +232,7 @@
 			<!-- End Single Slider -->
 
 			<!-- Start Single Slider -->
-			<div class="single-slider" style="background-image:url('img/theweb/slider2.jpg')"
+			<div class="single-slider" style="background-image:url('img/theweb/slider2.jpg'); background-image:image-set(url('img/theweb/slider2.webp') type('image/webp'), url('img/theweb/slider2.jpg') type('image/jpeg'))"
 				alt="Supplier of Electical and Mechanical Equipments In Nigeria">
 				<div class="container">
 					<div class="row">
@@ -1151,20 +1155,20 @@
 	</footer>
 	<!--/ End Footer Area -->
 	<!-- jQuery + Migrate (Migrate restores legacy APIs the plugins below rely on) -->
-	<script defer src="js/jquery.min.js?v=20260614"></script>
-	<script defer src="js/jquery-migrate-3.0.0.js?v=20260614"></script>
+	<script defer src="js/jquery.min.js?v=20260615"></script>
+	<script defer src="js/jquery-migrate-3.0.0.js?v=20260615"></script>
 	<!-- Easing (used by ScrollUp) -->
-	<script defer src="js/easing.js?v=20260614"></script>
+	<script defer src="js/easing.js?v=20260615"></script>
 	<!-- Mobile menu -->
-	<script defer src="js/slicknav.min.js?v=20260614"></script>
+	<script defer src="js/slicknav.min.js?v=20260615"></script>
 	<!-- Hero slider -->
-	<script defer src="js/owl-carousel.js?v=20260614"></script>
+	<script defer src="js/owl-carousel.js?v=20260615"></script>
 	<!-- Scroll-to-top -->
-	<script defer src="js/jquery.scrollUp.min.js?v=20260614"></script>
+	<script defer src="js/jquery.scrollUp.min.js?v=20260615"></script>
 	<!-- Parallax backgrounds -->
-	<script defer src="js/steller.js?v=20260614"></script>
+	<script defer src="js/steller.js?v=20260615"></script>
 	<!-- Site JS -->
-	<script defer src="js/main.js?v=20260614"></script>
+	<script defer src="js/main.js?v=20260615"></script>
 
 
 </body>
